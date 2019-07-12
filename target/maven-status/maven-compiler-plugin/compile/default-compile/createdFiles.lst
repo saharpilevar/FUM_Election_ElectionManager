@@ -1,0 +1,7 @@
+com/electionManager/SpringBootRestApiElectionManagerApplication.class
+com/electionManager/controller/ElectionController.class
+com/electionManager/model/Election.class
+com/electionManager/repository/ChoiceRepository.class
+com/electionManager/repository/ElectionRepository.class
+com/electionManager/exception/ResourceNotFoundException.class
+com/electionManager/model/Choice.class
