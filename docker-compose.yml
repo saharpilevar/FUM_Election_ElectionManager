@@ -1,46 +1,46 @@
 version: "3"
-services:
-  # electionPortalDb:
-  #   image: ardalanfp/election_portal_db:latest
-
-  # electionManagerDb:
-  #   image: ardalanfp/election_manager_db:latest
-
+services:  
+  electionPortalDb:
+    image: ardalanfp/election_portal_db:latest 
+    
+  electionManagerDb:
+    image: ardalanfp/election_manager_db:latest  
+     
   electionUI:
     image: sayid/election_ui:latest
     ports:
-      - "9090:9090"
-
-      # electionmanager:
-      #   image: ardalanfp/fum_election_electionmanager:latest
-
-      #   ports:
-      #     - "8080:8080"
-
-      # electionportal:
-      #   image: ardalanfp/fum_election_electionportal:latest
-
-      #   ports:
-      #     - "8090:8090"
-
-      # auth:
-      #   image: sayid/auth:latest
-
-      #   ports:
-      #     - "2000:2000"
-
-      # mongo:
-      #   image: mongo:latest
-
-    # visualizer:
-    #   image: dockersamples/visualizer:stable
-    #   ports:
-    #     - "8070:8070"
-    #   volumes:
-    #     - "/var/run/docker.sock:/var/run/docker.sock"
-    #   deploy:
-    #     placement:
-    #       constraints: [node.role == manager]
-
-
+      - "9091:9090"
+    
+  electionmanager:
+    image: ardalanfp/fum_election_electionmanager:latest
+    
+    # ports:
+      # - "8081:8080"
+    
+  electionportal:
+    image: ardalanfp/fum_election_electionportal:latest
+    
+    # ports:
+      # - "8090:8090"
+    
+  auth:
+    image: sayid/auth:latest
+    
+    # ports:
+      # - "2000:2000"
+    
+  mongo:
+    image: mongo:latest
+     
+  # visualizer:
+  #   image: dockersamples/visualizer:stable
+  #   ports:
+  #     - "8070:8070"
+  #   volumes:
+  #     - "/var/run/docker.sock:/var/run/docker.sock"
+  #   deploy:
+  #     placement:
+  #       constraints: [node.role == manager]
+   
+  
 
